@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dance Name</title>
+	<link rel="stylesheet" type="text/css" href="dance.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+</head>
+<body>
+
+<div class="header">
+	<div class="title">
+		<img src="tech.png" class="logo">
+	</div>
+
+	<div class="dance_information">
+		<h1 id="dance_name">Title</h1>
+		<h2 id="choreographer">KC</h2>
+	</div>
+</div>
+
+<div class="divider"></div>
+
+<div class="table">
+<br>
+<table id="cuesTable">
+	<thead>
+		<tr>
+			<td colspan="4" rowspan="2">Cue Info</td>
+			<td colspan="12">Fixture Info</td>
+			<td rowspan="2">Actions</td>
+		</tr>
+		<tr>
+			<td colspan="3">TRX (cyc)</td>
+			<td colspan="3">Rush (sides)</td>
+			<td colspan="3">Rush (tops)</td>
+			<td>Shins</td>
+			<td>Head High</td>
+			<td>Top S4 Pars</td>
+		</tr>
+		<tr>
+			<td>Cue Number</td>
+			<td>Cue Name</td>
+			<td>Time</td>
+			<td>Fade Time</td>
+			<td>Intensity</td>
+			<td>Color</td>
+			<td>Effect</td>
+			<td>Intensity</td>
+			<td>Color</td>
+			<td>Effect</td>
+			<td>Intensity</td>
+			<td>Color</td>
+			<td>Effect</td>
+			<td>Intensity</td>
+			<td>Intensity</td>
+			<td>Intensity</td>
+			<td>Delete</td>
+		</tr>
+	</thead>
+	<tbody id='cues' contenteditable='true'>
+	</tbody>
+</table>
+<br>	
+</div>
+
+<div class="divider"></div>
+
+<div class="footer">
+	<audio id="audio_player">
+		<source src="files/test.mp3" type="audio/mpeg">
+	</audio>
+	<div class="buttons">
+		<button id="playButton" class="button" onclick="playSong()">Play</button>
+		<button class="button" onclick="restartSong()">Restart</button>
+		<button class="button" onclick="addCue()">Add Cue at Current Location</button>
+		<button class="button" onclick="editInfo()" >Edit Dance Info</button>
+		<button class="button" onclick="writeTableToCSV()">Save</button>
+		<button class="button" >Export</button>
+	</div>
+</div>
+
+<div id="modal_back">
+	<div id="modal">
+		<form>
+			<p>Dance Name:</p>
+			<input type="text" required name="dance_name" id="dance_name_input"><br>
+			<p>Choreographer:</p>
+			<input type="text" name="choreographer" id="choreographer_input"><br>
+			<p>Midi Cue Number:</p>
+			<input type="number" name="midi"><br>
+			<p>Change Song:</p>
+			<input type="file" name="song"><br>
+			<button class="modal_button">Save</button>
+		</form>
+	</div>
+</div>
+
+<script type="text/javascript" src="dance.js"></script>
+</body>
+</html>
